@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title></title>
+
+</head>
+<body>
+    <p th:utext="${error}"></p>
+    <form method="post" th:action="@{/login1}">
+        <input type="text" name="username" value=""/><br/>
+        <input type="password" name="password" value=""/><br/>
+        <input type="submit" value="login"/>
+    </form>
+</body>
+</html>

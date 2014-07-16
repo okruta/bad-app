@@ -38,7 +38,7 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/success/{id}", method = RequestMethod.GET)
-    public String success(Model model, @PathVariable("id") Long id) {
+    public String success(Model model, @PathVariable("id") String id) {
         User user = (User) em.createNativeQuery("select * from user where id=" + id, User.class).getSingleResult();
         model.addAttribute("user", user);
         return "/success";
